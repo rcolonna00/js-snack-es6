@@ -51,3 +51,54 @@ document.getElementById('bici').innerHTML = caratteristicheBici;
 // Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. 
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli 
 // subiti e stampiamo tutto in console.
+
+const squadre = [
+    {
+        'nome': 'Ascoli',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    },
+    {
+        'nome': 'Reggiana',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    },
+    {
+        'nome': 'Cosenza',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    },
+    {
+        'nome': 'Pordenone',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    }
+];
+    
+for( let i = 0; i < squadre.length; i++ ) {
+    let squadraI = squadre[i];
+    
+    // Assegno un numero random a punti fatti
+    squadraI.punti_fatti = getRandomInteger(1, 80);
+    
+    // Assegno un numero random ai falli subiti
+    squadraI.falli_subiti = getRandomInteger(1, 100);
+
+    
+    //console.log(squadre);
+
+    let nomeSquadra = squadraI.nome;
+    let falliSquadra = squadraI.falli_subiti;
+
+
+    const squadreSeconde = {
+        'nome': nomeSquadra,
+        'falli_subiti': falliSquadra 
+    };
+
+    console.log(squadreSeconde)
+}    
+//Functions
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+};
