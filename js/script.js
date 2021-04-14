@@ -28,6 +28,13 @@ const [ bici1, bici2, bici3, bici4, bici5] = biciclette;
 
 let biciPiuLeggera = bici1;
 
+// let { nome, peso } = biciclette;
+
+// const biciPiuLeggera = { 
+//     nome, 
+//     peso
+// };
+
 for ( let i = 0; i < biciclette.length; i++ ) {
     let bicicletteI = biciclette[i];
     
@@ -37,9 +44,11 @@ for ( let i = 0; i < biciclette.length; i++ ) {
 };
 console.log(biciPiuLeggera)
 
+const {nome, peso} = biciPiuLeggera;
+
 const caratteristicheBici = `
     <ul>
-        <li>la bici più leggera è la ${biciPiuLeggera.nome}</li>
+        <li>la bici più leggera è la ${nome}</li>
         <li>e pesa ${biciPiuLeggera.peso} kg</li>
     </ul>
 `;
@@ -90,10 +99,11 @@ for( let i = 0; i < squadre.length; i++ ) {
     let nomeSquadra = squadraI.nome;
     let falliSquadra = squadraI.falli_subiti;
 
+    const {nome, falli_subiti} = squadre;
 
     const squadreSeconde = {
-        'nome': nomeSquadra,
-        'falli_subiti': falliSquadra 
+        nome: nomeSquadra,
+        falli_subiti: falliSquadra 
     };
 
     console.log(squadreSeconde)
